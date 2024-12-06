@@ -174,6 +174,13 @@ case "${COMMAND}" in
   "clean")
     eval ${MAKE} ARCH=${TARGET_ARCH} clean
     ;;
+  "generate-compile-commands")
+    eval ${MAKE} ARCH=${TARGET_ARCH} olddefconfig
+    CMD="time ${MAKE} ARCH=${TARGET_ARCH} compile_commands.json"
+    echo ${CMD}
+    eval ${CMD}
+    echo $?
+    ;;
   "build")
     depend_on defconfig
 

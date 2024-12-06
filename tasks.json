@@ -92,6 +92,10 @@
       "args": ["defconfig"],
     },
     {
+       "label": "Generate compile-commands.json",
+       "args": ["generate-compile-commands"],
+    },
+    {
       "label": "Build kernel",
       "args": ["build"],
       // Map this task to the Ctrl+Shift+P -> "Run build task" command.
