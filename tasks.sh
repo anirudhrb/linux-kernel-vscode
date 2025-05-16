@@ -201,7 +201,7 @@ case "${COMMAND}" in
     #spinner $!
 
     # A gdb index may need to be re-generated. Don't clear the above make logs.
-    CLEAR=0 $SCRIPT gdb-index
+    # CLEAR=0 $SCRIPT gdb-index
     # A tracer module may need to be re-built
     CLEAR=0 $SCRIPT systemtap-build
     ;;
