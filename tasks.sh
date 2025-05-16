@@ -181,6 +181,13 @@ case "${COMMAND}" in
     eval ${CMD}
     echo $?
     ;;
+  "generic-make")
+    # Run arbitrary make commands in the kernel tree
+    shift
+    CMD="time ${MAKE} ARCH=${TARGET_ARCH} $@"
+    echo ${CMD}
+    eval ${CMD}
+    ;;
   "build")
     depend_on defconfig
 
